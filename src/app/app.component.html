@@ -1,12 +1,6 @@
 <h1>{{title}}</h1>
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
-
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <!--ngFor的*前缀表示<li>及其子元素组成了一个主控模板。-->
-  <li *ngFor="let hero of heroes" 
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-  <span class="badge">{{hero.id}}</span> {{hero.name}}
-</ul>
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
