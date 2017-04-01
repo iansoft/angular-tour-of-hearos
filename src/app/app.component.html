@@ -1,6 +1,15 @@
 <h1>{{title}}</h1>
+<input #box (keyup)="onKey(box.value)">
+<p>{{values}}</p>
+
+<input #box2 
+    (keyup.enter)="update(box2.value)"
+    (blur)="update(box2.value)">
+<p>{{value}}</p>
 <nav>
     <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
 </nav>
 <router-outlet></router-outlet>
+
+<app-hero-form></app-hero-form>

@@ -17,5 +17,18 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Tour of Heroes';
+  values = '';
+  value = '';
+
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
+
+  update(value: string) { this.value = value; }
+
+  // onKey(event: KeyboardEvent) { // with type info
+  //     this.values += (<HTMLInputElement>event.target).value + ' | ';
+  //   }
+  // }
 }
 
